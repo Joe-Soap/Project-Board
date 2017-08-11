@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_Board" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-sy-5rP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyl-CY-ZJb">
+                                        <rect key="frame" x="8" y="28" width="359" height="587"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="587" id="pR1-xe-zKM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.54332378697107075" green="0.60650097150259064" blue="0.60650097150259064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pyl-CY-ZJb" firstAttribute="centerX" secondItem="Pda-sy-5rP" secondAttribute="centerX" id="8zn-LX-bek"/>
+                                    <constraint firstItem="pyl-CY-ZJb" firstAttribute="bottom" secondItem="Pda-sy-5rP" secondAttribute="bottomMargin" id="9zU-sq-Jk8"/>
+                                    <constraint firstItem="pyl-CY-ZJb" firstAttribute="trailing" secondItem="Pda-sy-5rP" secondAttribute="trailingMargin" id="IyP-Ar-Utx"/>
+                                    <constraint firstItem="pyl-CY-ZJb" firstAttribute="leading" secondItem="Pda-sy-5rP" secondAttribute="leadingMargin" id="bIZ-6E-esf"/>
+                                    <constraint firstItem="pyl-CY-ZJb" firstAttribute="top" secondItem="Pda-sy-5rP" secondAttribute="top" constant="28" id="uaV-XQ-9fY"/>
+                                </constraints>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="6FM-Ty-hvM">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="add" id="dRs-z0-kY6">
+                                        <color key="tintColor" red="0.29299224976871696" green="1" blue="0.82349304240017684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="addComponent" destination="BYZ-38-t0r" id="7Aw-L3-ESx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="50" systemItem="trash" id="Mfz-x9-Tmz">
+                                        <color key="tintColor" red="0.29299224979999999" green="1" blue="0.82349304239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="trashComponent:" destination="BYZ-38-t0r" id="k87-Bh-r39"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="dmH-pg-t6n">
+                                        <color key="tintColor" red="0.29299224979999999" green="1" blue="0.82349304239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="pauseTapped:" destination="BYZ-38-t0r" id="Ibn-dd-cCV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="bottom" secondItem="6FM-Ty-hvM" secondAttribute="top" id="9b6-JI-mO4"/>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EPC-sl-rx7"/>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="leading" secondItem="6FM-Ty-hvM" secondAttribute="leading" id="ITE-Ii-957"/>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="trailing" secondItem="6FM-Ty-hvM" secondAttribute="trailing" id="Sdk-JT-z4A"/>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T4j-mN-c4R"/>
+                            <constraint firstItem="Pda-sy-5rP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U28-tt-B8C"/>
+                            <constraint firstItem="6FM-Ty-hvM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oxY-EM-ZFj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="canvas" destination="pyl-CY-ZJb" id="dym-gD-kU2"/>
+                        <outlet property="scrollView" destination="Pda-sy-5rP" id="FAq-E3-53d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

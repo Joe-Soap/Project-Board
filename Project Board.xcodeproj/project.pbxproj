@@ -14,6 +14,8 @@
 		F252A7EF1F3602F200F51ABC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F252A7ED1F3602F200F51ABC /* LaunchScreen.storyboard */; };
 		F252A7FA1F3602F300F51ABC /* Project_BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252A7F91F3602F300F51ABC /* Project_BoardTests.swift */; };
 		F252A8051F3602F300F51ABC /* Project_BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252A8041F3602F300F51ABC /* Project_BoardUITests.swift */; };
+		F252A8131F36032E00F51ABC /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252A8121F36032E00F51ABC /* ComponentView.swift */; };
+		F252A8151F36081B00F51ABC /* CircuitKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F252A8141F36081B00F51ABC /* CircuitKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2128BC41F385C2800E84C3E /* ComponentAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAll.swift; sourceTree = "<group>"; };
 		F252A7E11F3602F200F51ABC /* Project Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F252A7E41F3602F200F51ABC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F252A7E61F3602F200F51ABC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,8 @@
 		F252A8001F3602F300F51ABC /* Project BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project BoardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F252A8041F3602F300F51ABC /* Project_BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_BoardUITests.swift; sourceTree = "<group>"; };
 		F252A8061F3602F300F51ABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F252A8121F36032E00F51ABC /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
+		F252A8141F36081B00F51ABC /* CircuitKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		F252A7D81F3602F200F51ABC = {
 			isa = PBXGroup;
 			children = (
+				F2128BC41F385C2800E84C3E /* ComponentAll.swift */,
 				F252A7E31F3602F200F51ABC /* Project Board */,
 				F252A7F81F3602F300F51ABC /* Project BoardTests */,
 				F252A8031F3602F300F51ABC /* Project BoardUITests */,
@@ -103,6 +109,8 @@
 				F252A7EB1F3602F200F51ABC /* Assets.xcassets */,
 				F252A7ED1F3602F200F51ABC /* LaunchScreen.storyboard */,
 				F252A7F01F3602F200F51ABC /* Info.plist */,
+				F252A8121F36032E00F51ABC /* ComponentView.swift */,
+				F252A8141F36081B00F51ABC /* CircuitKit.swift */,
 			);
 			path = "Project Board";
 			sourceTree = "<group>";
@@ -257,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F252A7E71F3602F200F51ABC /* ViewController.swift in Sources */,
+				F252A8131F36032E00F51ABC /* ComponentView.swift in Sources */,
+				F252A8151F36081B00F51ABC /* CircuitKit.swift in Sources */,
 				F252A7E51F3602F200F51ABC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
